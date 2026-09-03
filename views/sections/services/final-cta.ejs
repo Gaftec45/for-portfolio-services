@@ -1,0 +1,139 @@
+<style>
+    /* ==============================
+   Services Final CTA
+============================== */
+
+.services-final-cta-section {
+    background: #000000;
+    padding: 96px 0;
+}
+
+.services-final-cta-container {
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.services-final-cta-title {
+    margin: 0 0 32px;
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.services-final-cta-description {
+    max-width: 55ch;
+    margin: 0 auto 48px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 20px;
+    line-height: 1.65;
+}
+
+.services-final-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.services-final-cta-primary,
+.services-final-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.services-final-cta-primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.services-final-cta-secondary {
+    background: #f5f5f5;
+    color: #000000;
+}
+
+.services-final-cta-primary:hover,
+.services-final-cta-secondary:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   Services Final CTA Responsive
+============================== */
+
+@media (max-width: 767px) {
+    .services-final-cta-section {
+        padding: 80px 0;
+    }
+
+    .services-final-cta-container {
+        padding: 0 20px;
+    }
+
+    .services-final-cta-title {
+        font-size: 42px;
+    }
+
+    .services-final-cta-description {
+        font-size: 17px;
+        margin-bottom: 36px;
+    }
+
+    .services-final-cta-actions {
+        flex-direction: column;
+    }
+
+    .services-final-cta-primary,
+    .services-final-cta-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-final-cta-title {
+        font-size: 36px;
+    }
+}
+</style>
+
+<section class="services-final-cta-section">
+    <div class="services-final-cta-container">
+
+        <h2 class="services-final-cta-title">
+            Ready to Improve Your Shopify Store?
+        </h2>
+
+        <p class="services-final-cta-description">
+            Tell us about your store, your biggest challenge,
+            and what you're trying to achieve. We'll help you
+            figure out the most practical next step.
+        </p>
+
+        <div class="services-final-cta-actions">
+
+            <a href="/contact" class="services-final-cta-primary">
+                Discuss Your Store
+            </a>
+
+            <a href="mailto:info@marjheerdy.com" class="services-final-cta-secondary">
+                Email Marjheerdy
+            </a>
+
+        </div>
+
+    </div>
+</section>

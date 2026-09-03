@@ -1,0 +1,196 @@
+<style>
+    /* ==============================
+   How It Works Section
+============================== */
+
+.how-it-works-section {
+    padding: 96px 0;
+}
+
+.how-it-works-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.how-it-works-title {
+    margin: 0 0 48px;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+
+/* ==============================
+   How It Works Grid
+============================== */
+
+.how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+}
+
+.how-it-works-card {
+    padding: 32px;
+    background: #ffffff;
+}
+
+.how-it-works-step {
+    display: block;
+    color: #000000;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.how-it-works-card h3 {
+    margin: 16px 0 12px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.how-it-works-card p {
+    margin: 0;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   How It Works Button
+============================== */
+
+.how-it-works-action {
+    margin-top: 48px;
+}
+
+.how-it-works-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 3px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.how-it-works-button:hover {
+    background: #333333;
+}
+
+
+/* ==============================
+   How It Works Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .how-it-works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .how-it-works-section {
+        padding: 72px 0;
+    }
+
+    .how-it-works-container {
+        padding: 0 20px;
+    }
+
+    .how-it-works-title {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-it-works-card {
+        padding: 28px 24px;
+    }
+
+    .how-it-works-action {
+        margin-top: 40px;
+    }
+}
+</style>
+
+<section class="how-it-works-section">
+    <div class="how-it-works-container">
+
+        <h2 class="how-it-works-title">
+            How It Works
+        </h2>
+
+        <ol class="how-it-works-grid">
+
+            <li class="how-it-works-card">
+                <span class="how-it-works-step">STEP 01</span>
+
+                <h3>Tell Us About Your Store</h3>
+
+                <p>
+                    You explain your store, your goals, your challenges,
+                    and what you need help with.
+                </p>
+            </li>
+
+            <li class="how-it-works-card">
+                <span class="how-it-works-step">STEP 02</span>
+
+                <h3>Identify What Is Holding It Back</h3>
+
+                <p>
+                    We evaluate the situation and identify the most
+                    important opportunities.
+                </p>
+            </li>
+
+            <li class="how-it-works-card">
+                <span class="how-it-works-step">STEP 03</span>
+
+                <h3>Recommend the Right Strategy</h3>
+
+                <p>
+                    We recommend the services and improvements that
+                    fit your store and your budget.
+                </p>
+            </li>
+
+            <li class="how-it-works-card">
+                <span class="how-it-works-step">STEP 04</span>
+
+                <h3>Implement &amp; Improve</h3>
+
+                <p>
+                    We implement the agreed work and focus on a better
+                    Shopify experience and stronger performance.
+                </p>
+            </li>
+
+        </ol>
+
+        <div class="how-it-works-action">
+            <a href="/contact" class="how-it-works-button">
+                Discuss Your Store
+            </a>
+        </div>
+
+    </div>
+</section>

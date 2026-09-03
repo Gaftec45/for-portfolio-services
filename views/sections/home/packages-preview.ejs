@@ -1,0 +1,341 @@
+<style>
+    /* ==============================
+   Packages Preview Section
+============================== */
+
+.packages-preview-section {
+    border-top: 1px solid #e5e5e5;
+    padding: 96px 0;
+}
+
+.packages-preview-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.packages-preview-header {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.packages-preview-title {
+    margin: 0 0 16px;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.packages-preview-description {
+    margin: 0;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   Package Cards
+============================== */
+
+.packages-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.package-card h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.package-description {
+    min-height: 48px;
+    margin: 8px 0 0;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.package-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 24px 0 0;
+}
+
+.package-price span {
+    color: #737373;
+    font-size: 14px;
+}
+
+.package-price strong {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.package-features {
+    flex-grow: 1;
+    margin: 32px 0 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.package-features li {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.package-features li:last-child {
+    margin-bottom: 0;
+}
+
+.package-features li span {
+    color: #000000;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   Featured Package
+============================== */
+
+.package-card-featured {
+    border: 2px solid #000000;
+}
+
+.package-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   Package Buttons
+============================== */
+
+.package-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.package-button-outline {
+    border: 1px solid #000000;
+    color: #000000;
+    background: transparent;
+}
+
+.package-button-outline:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.package-button-filled {
+    background: #000000;
+    color: #ffffff;
+}
+
+.package-button-filled:hover {
+    background: #333333;
+}
+
+
+/* ==============================
+   Package Note
+============================== */
+
+.packages-preview-note {
+    margin: 48px auto 0;
+    max-width: 80ch;
+    color: #737373;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* ==============================
+   Packages Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .packages-preview-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .packages-preview-section {
+        padding: 72px 0;
+    }
+
+    .packages-preview-container {
+        padding: 0 20px;
+    }
+
+    .packages-preview-header {
+        margin-bottom: 48px;
+    }
+
+    .packages-preview-title {
+        font-size: 30px;
+    }
+
+    .package-card {
+        padding: 28px 24px;
+    }
+}
+</style>
+
+<section class="packages-preview-section">
+    <div class="packages-preview-container">
+
+        <div class="packages-preview-header">
+            <h2 class="packages-preview-title">
+                Clear Packages for Growing Stores
+            </h2>
+
+            <p class="packages-preview-description">
+                Starting points, not rigid plans. Choose what fits your current stage.
+            </p>
+        </div>
+
+        <div class="packages-preview-grid">
+
+            <!-- Essential -->
+            <article class="package-card">
+                <h3>Essential</h3>
+
+                <p class="package-description">
+                    New and small Shopify stores that need essential improvements
+                </p>
+
+                <p class="package-price">
+                    <span>Starting from</span>
+                    <strong>$150</strong>
+                </p>
+
+                <ul class="package-features">
+                    <li><span>•</span>Shopify store review</li>
+                    <li><span>•</span>Basic store optimization</li>
+                    <li><span>•</span>Homepage improvements</li>
+                    <li><span>•</span>Product page recommendations</li>
+                    <li><span>•</span>Mobile experience review</li>
+                </ul>
+
+                <a href="/packages" class="package-button package-button-outline">
+                    See full package
+                </a>
+            </article>
+
+
+            <!-- Growth -->
+            <article class="package-card package-card-featured">
+
+                <span class="package-badge">
+                    Most chosen
+                </span>
+
+                <h3>Growth</h3>
+
+                <p class="package-description">
+                    Existing stores with traffic that need better conversion
+                </p>
+
+                <p class="package-price">
+                    <span>Starting from</span>
+                    <strong>$350</strong>
+                </p>
+
+                <ul class="package-features">
+                    <li><span>•</span>Comprehensive store audit</li>
+                    <li><span>•</span>Store design improvements</li>
+                    <li><span>•</span>Conversion optimization</li>
+                    <li><span>•</span>Product page optimization</li>
+                    <li><span>•</span>SEO improvements</li>
+                </ul>
+
+                <a href="/packages" class="package-button package-button-filled">
+                    See full package
+                </a>
+            </article>
+
+
+            <!-- Scale -->
+            <article class="package-card">
+                <h3>Scale</h3>
+
+                <p class="package-description">
+                    Established businesses that need multiple areas improved
+                </p>
+
+                <p class="package-price">
+                    <span>Starting from</span>
+                    <strong>$750</strong>
+                </p>
+
+                <ul class="package-features">
+                    <li><span>•</span>Full Shopify store optimization</li>
+                    <li><span>•</span>Advanced conversion optimization</li>
+                    <li><span>•</span>Advanced SEO</li>
+                    <li><span>•</span>Email marketing strategy</li>
+                    <li><span>•</span>Klaviyo strategy and implementation</li>
+                </ul>
+
+                <a href="/packages" class="package-button package-button-outline">
+                    See full package
+                </a>
+            </article>
+
+        </div>
+
+        <p class="packages-preview-note">
+            Every Shopify store is different. Final pricing depends on your
+            store, requirements, complexity, goals, and the level of
+            implementation required.
+        </p>
+
+    </div>
+</section>

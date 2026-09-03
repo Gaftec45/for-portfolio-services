@@ -1,0 +1,191 @@
+<style>
+    /* ==============================
+   About Approach Section
+============================== */
+
+.about-approach-section {
+    padding: 80px 0;
+}
+
+.about-approach-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.about-approach-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.about-approach-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #737373;
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.about-approach-content p {
+    margin: 0;
+}
+
+.about-approach-highlight {
+    padding-left: 16px;
+    border-left: 2px solid #000000;
+    color: #171717;
+    font-weight: 500;
+}
+
+.about-approach-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-self: start;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+}
+
+.about-approach-stat {
+    padding: 24px;
+    background: #ffffff;
+}
+
+.about-approach-stat-label {
+    margin: 0;
+    color: #000000;
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.about-approach-stat-text {
+    margin: 8px 0 0;
+    color: #171717;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+
+/* ==============================
+   About Approach Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .about-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .about-approach-stats {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-approach-section {
+        padding: 64px 0;
+    }
+
+    .about-approach-container {
+        padding: 0 20px;
+    }
+
+    .about-approach-content {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .about-approach-stat {
+        padding: 20px;
+    }
+}
+</style>
+
+<section class="about-approach-section">
+    <div class="about-approach-container">
+
+        <div class="about-approach-grid">
+
+            <div class="about-approach-content">
+
+                <p>
+                    Your Shopify store should do more than look good.
+                    It should work as a growth tool for your business —
+                    bringing the right people in, explaining your products
+                    clearly, and making it easy to buy.
+                </p>
+
+                <p>
+                    Different stores have different problems. Some need
+                    better design. Some need better conversion. Some need
+                    SEO. Some need email marketing. Some need a complete
+                    overhaul, and plenty need far less than they expect.
+                </p>
+
+                <p>
+                    Our job is to identify the highest-priority opportunities
+                    for your specific store and recommend practical solutions
+                    you can actually act on. We work with your goals, your
+                    customers, and the budget you have available.
+                </p>
+
+                <p class="about-approach-highlight">
+                    We don't recommend services simply because they can be
+                    sold. The recommendation is based on what the store
+                    actually needs.
+                </p>
+
+            </div>
+
+            <aside class="about-approach-stats">
+
+                <div class="about-approach-stat">
+                    <p class="about-approach-stat-label">200+</p>
+                    <p class="about-approach-stat-text">
+                        Shopify store owners helped
+                    </p>
+                </div>
+
+                <div class="about-approach-stat">
+                    <p class="about-approach-stat-label">Shopify</p>
+                    <p class="about-approach-stat-text">
+                        Focused platform expertise
+                    </p>
+                </div>
+
+                <div class="about-approach-stat">
+                    <p class="about-approach-stat-label">Practical</p>
+                    <p class="about-approach-stat-text">
+                        Implementation over theory
+                    </p>
+                </div>
+
+                <div class="about-approach-stat">
+                    <p class="about-approach-stat-label">Budget-aware</p>
+                    <p class="about-approach-stat-text">
+                        Prioritized recommendations
+                    </p>
+                </div>
+
+                <div class="about-approach-stat">
+                    <p class="about-approach-stat-label">Conversion</p>
+                    <p class="about-approach-stat-text">
+                        The metric we care about
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+</section>

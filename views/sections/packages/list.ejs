@@ -1,0 +1,392 @@
+<style>
+    /* ==============================
+   Packages List
+============================== */
+
+.packages-list-section {
+    padding: 80px 0;
+}
+
+.packages-list-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.packages-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.package-list-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.package-list-card-featured {
+    border: 2px solid #171717;
+}
+
+.package-list-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.package-list-card h2 {
+    margin: 0;
+    color: #171717;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.package-list-description {
+    margin: 8px 0 0;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.package-list-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 24px 0 0;
+}
+
+.package-list-price span {
+    color: #737373;
+    font-size: 14px;
+}
+
+.package-list-price strong {
+    color: #171717;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.package-list-label {
+    margin: 32px 0 0;
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.package-list-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+    margin: 16px 0 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.package-list-features li {
+    position: relative;
+    padding-left: 18px;
+    color: #171717;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.package-list-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-weight: 700;
+}
+
+.package-list-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.package-list-button-outline {
+    border: 1px solid #171717;
+    background: transparent;
+    color: #171717;
+}
+
+.package-list-button-outline:hover {
+    background: #171717;
+    color: #ffffff;
+}
+
+.package-list-button-filled {
+    background: #171717;
+    color: #ffffff;
+}
+
+.package-list-button-filled:hover {
+    background: #000000;
+}
+
+
+/* ==============================
+   Packages Help
+============================== */
+
+.packages-list-help {
+    margin-top: 64px;
+    padding: 32px;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+}
+
+.packages-list-help h2 {
+    margin: 0;
+    color: #171717;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.packages-list-help p {
+    max-width: 60ch;
+    margin: 16px 0 0;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.packages-list-help-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 16px 32px;
+    border-radius: 2px;
+    background: #171717;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.packages-list-help-button:hover {
+    background: #000000;
+}
+
+
+/* ==============================
+   Packages Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .packages-list-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .packages-list-section {
+        padding: 64px 0;
+    }
+
+    .packages-list-container {
+        padding: 0 20px;
+    }
+
+    .package-list-card {
+        padding: 28px 24px;
+    }
+
+    .packages-list-help {
+        margin-top: 48px;
+        padding: 28px 24px;
+    }
+
+    .packages-list-help h2 {
+        font-size: 23px;
+    }
+
+    .packages-list-help-button {
+        width: 100%;
+    }
+}
+</style>
+
+<section class="packages-list-section">
+    <div class="packages-list-container">
+
+        <div class="packages-list-grid">
+
+            <!-- Essential -->
+            <article class="package-list-card">
+
+                <h2>Essential</h2>
+
+                <p class="package-list-description">
+                    New and small Shopify stores that need essential improvements
+                </p>
+
+                <p class="package-list-price">
+                    <span>Starting from</span>
+                    <strong>$150</strong>
+                </p>
+
+                <h3 class="package-list-label">
+                    Potential inclusions
+                </h3>
+
+                <ul class="package-list-features">
+                    <li>Shopify store review</li>
+                    <li>Basic store optimization</li>
+                    <li>Homepage improvements</li>
+                    <li>Product page recommendations</li>
+                    <li>Mobile experience review</li>
+                    <li>Basic SEO improvements</li>
+                    <li>Basic conversion recommendations</li>
+                    <li>Action plan</li>
+                </ul>
+
+                <a href="/contact" class="package-list-button package-list-button-outline">
+                    Discuss Your Store
+                </a>
+
+            </article>
+
+
+            <!-- Growth -->
+            <article class="package-list-card package-list-card-featured">
+
+                <span class="package-list-badge">
+                    Most chosen
+                </span>
+
+                <h2>Growth</h2>
+
+                <p class="package-list-description">
+                    Existing stores with traffic that need better conversion
+                </p>
+
+                <p class="package-list-price">
+                    <span>Starting from</span>
+                    <strong>$350</strong>
+                </p>
+
+                <h3 class="package-list-label">
+                    Potential inclusions
+                </h3>
+
+                <ul class="package-list-features">
+                    <li>Comprehensive store audit</li>
+                    <li>Store design improvements</li>
+                    <li>Conversion optimization</li>
+                    <li>Product page optimization</li>
+                    <li>SEO improvements</li>
+                    <li>Email marketing recommendations</li>
+                    <li>Customer journey improvements</li>
+                    <li>Mobile optimization</li>
+                    <li>Performance recommendations</li>
+                    <li>Growth strategy</li>
+                </ul>
+
+                <a href="/contact" class="package-list-button package-list-button-filled">
+                    Discuss Your Store
+                </a>
+
+            </article>
+
+
+            <!-- Scale -->
+            <article class="package-list-card">
+
+                <h2>Scale</h2>
+
+                <p class="package-list-description">
+                    Established businesses that need multiple areas improved
+                </p>
+
+                <p class="package-list-price">
+                    <span>Starting from</span>
+                    <strong>$750</strong>
+                </p>
+
+                <h3 class="package-list-label">
+                    Potential inclusions
+                </h3>
+
+                <ul class="package-list-features">
+                    <li>Full Shopify store optimization</li>
+                    <li>Advanced conversion optimization</li>
+                    <li>Advanced SEO</li>
+                    <li>Email marketing strategy</li>
+                    <li>Klaviyo strategy and implementation</li>
+                    <li>Product and collection optimization</li>
+                    <li>Landing page optimization</li>
+                    <li>Performance optimization</li>
+                    <li>Customer journey optimization</li>
+                    <li>Growth strategy</li>
+                    <li>Ongoing support recommendations</li>
+                </ul>
+
+                <a href="/contact" class="package-list-button package-list-button-outline">
+                    Discuss Your Store
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <!-- Package Help -->
+        <div class="packages-list-help">
+
+            <h2>
+                Not sure which package is right for you?
+            </h2>
+
+            <p>
+                You don't have to choose. Tell us about your store and what
+                you're trying to achieve, and we'll tell you what makes sense —
+                including if that's something smaller than a package.
+            </p>
+
+            <a href="/contact" class="packages-list-help-button">
+                Tell Us About Your Store
+            </a>
+
+        </div>
+
+    </div>
+</section>

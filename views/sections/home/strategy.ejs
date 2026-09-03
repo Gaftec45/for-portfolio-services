@@ -1,0 +1,184 @@
+<style>
+/* ==============================
+   Strategy Section
+============================== */
+
+.strategy-section {
+    background: #111111;
+    color: #ffffff;
+    padding: 96px 0;
+}
+
+.strategy-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.strategy-header {
+    margin-bottom: 64px;
+}
+
+.strategy-title {
+    margin: 0 0 16px;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.strategy-description {
+    max-width: 60ch;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.strategy-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.strategy-number {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.strategy-item h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.strategy-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   Strategy Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .strategy-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .strategy-section {
+        padding: 72px 0;
+    }
+
+    .strategy-container {
+        padding: 0 20px;
+    }
+
+    .strategy-header {
+        margin-bottom: 48px;
+    }
+
+    .strategy-title {
+        font-size: 30px;
+    }
+
+    .strategy-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .strategy-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+</style>
+
+<section class="strategy-section">
+    <div class="strategy-container">
+
+        <div class="strategy-header">
+            <h2 class="strategy-title">
+                Strategy Before Implementation
+            </h2>
+
+            <p class="strategy-description">
+                We don't believe every Shopify store needs the same solution.
+                We first understand the store, the business, the customers,
+                the current challenges, and the available budget. Then we
+                recommend the most practical improvements.
+            </p>
+        </div>
+
+        <ol class="strategy-grid">
+
+            <li class="strategy-item">
+                <span class="strategy-number">1</span>
+                <h3>Understand</h3>
+                <p>
+                    Your business, your customers, your goals, and your budget.
+                </p>
+            </li>
+
+            <li class="strategy-item">
+                <span class="strategy-number">2</span>
+                <h3>Analyze</h3>
+                <p>
+                    A close look at the store itself and where it loses people.
+                </p>
+            </li>
+
+            <li class="strategy-item">
+                <span class="strategy-number">3</span>
+                <h3>Recommend</h3>
+                <p>
+                    A prioritized list of improvements that make sense for you.
+                </p>
+            </li>
+
+            <li class="strategy-item">
+                <span class="strategy-number">4</span>
+                <h3>Implement</h3>
+                <p>
+                    The agreed work, executed carefully and communicated clearly.
+                </p>
+            </li>
+
+            <li class="strategy-item">
+                <span class="strategy-number">5</span>
+                <h3>Improve</h3>
+                <p>
+                    Continued refinement based on what the store tells us.
+                </p>
+            </li>
+
+        </ol>
+
+    </div>
+</section>

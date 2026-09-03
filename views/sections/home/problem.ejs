@@ -1,0 +1,308 @@
+<style>
+    /* ========================================
+Problem Section
+======================================== */
+
+.problem-section {
+width: 100%;
+
+
+padding: 96px 0;
+
+
+}
+
+.problem-container {
+width: 100%;
+max-width: 1280px;
+
+
+margin: 0 auto;
+padding: 0 24px;
+
+
+}
+
+.problem-grid {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 64px;
+
+
+}
+
+/* ========================================
+Introduction
+======================================== */
+
+.problem-intro {
+min-width: 0;
+}
+
+.problem-title {
+margin: 0 0 24px;
+
+
+font-size: clamp(32px, 4vw, 48px);
+
+font-weight: 800;
+
+line-height: 1.1;
+
+letter-spacing: -0.035em;
+
+
+}
+
+.problem-title span {
+color: #737373;
+}
+
+.problem-description {
+max-width: 44ch;
+
+
+margin: 0;
+
+color: #737373;
+
+font-size: 16px;
+
+line-height: 1.6;
+
+
+}
+
+/* ========================================
+Problem List
+======================================== */
+
+.problem-list {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+column-gap: 48px;
+row-gap: 16px;
+
+margin: 0;
+padding: 0;
+
+list-style: none;
+
+
+}
+
+.problem-list li {
+display: flex;
+align-items: flex-start;
+
+
+gap: 12px;
+
+padding-bottom: 16px;
+
+border-bottom: 1px solid rgba(229, 229, 229, 0.6);
+
+font-size: 15px;
+font-weight: 500;
+
+line-height: 1.4;
+
+
+}
+
+.problem-list li span:first-child {
+margin-top: 2px;
+
+
+flex-shrink: 0;
+
+color: #737373;
+
+font-family: monospace;
+font-size: 11px;
+
+
+}
+
+/* ========================================
+Desktop Large
+======================================== */
+
+@media (min-width: 1200px) {
+
+
+.problem-grid {
+    gap: 80px;
+}
+
+
+}
+
+/* ========================================
+Tablet
+======================================== */
+
+@media (max-width: 1023px) {
+
+
+.problem-grid {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+}
+
+.problem-list {
+    column-gap: 32px;
+}
+
+
+}
+
+/* ========================================
+Mobile
+======================================== */
+
+@media (max-width: 640px) {
+
+
+.problem-section {
+    padding: 72px 0;
+}
+
+.problem-container {
+    padding: 0 20px;
+}
+
+.problem-grid {
+    gap: 40px;
+}
+
+.problem-title {
+    font-size: 32px;
+}
+
+.problem-description {
+    font-size: 15px;
+}
+
+.problem-list {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+}
+
+
+}
+
+</style>
+
+<section class="problem-section">
+
+
+<div class="problem-container">
+
+    <div class="problem-grid">
+
+        <!-- Section Introduction -->
+        <div class="problem-intro">
+
+            <h2 class="problem-title">
+                Your Store May Not Need More Traffic.
+                <br>
+                <span>It May Need Better Conversion.</span>
+            </h2>
+
+            <p class="problem-description">
+                Most stores we look at are losing customers
+                somewhere specific — not everywhere. We look
+                at your actual store and identify what is holding
+                the business back before we recommend anything.
+            </p>
+
+        </div>
+
+
+        <!-- Problems -->
+        <ul class="problem-list">
+
+            <li>
+                <span>01</span>
+                <span>Poor store structure</span>
+            </li>
+
+            <li>
+                <span>02</span>
+                <span>Low conversion rates</span>
+            </li>
+
+            <li>
+                <span>03</span>
+                <span>Weak product pages</span>
+            </li>
+
+            <li>
+                <span>04</span>
+                <span>Poor mobile experience</span>
+            </li>
+
+            <li>
+                <span>05</span>
+                <span>Slow website performance</span>
+            </li>
+
+            <li>
+                <span>06</span>
+                <span>Weak SEO</span>
+            </li>
+
+            <li>
+                <span>07</span>
+                <span>Low email revenue</span>
+            </li>
+
+            <li>
+                <span>08</span>
+                <span>Poor customer journey</span>
+            </li>
+
+            <li>
+                <span>09</span>
+                <span>Unclear messaging</span>
+            </li>
+
+            <li>
+                <span>10</span>
+                <span>Weak calls to action</span>
+            </li>
+
+            <li>
+                <span>11</span>
+                <span>Abandoned carts</span>
+            </li>
+
+            <li>
+                <span>12</span>
+                <span>Poor trust signals</span>
+            </li>
+
+            <li>
+                <span>13</span>
+                <span>Weak product positioning</span>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+</section>

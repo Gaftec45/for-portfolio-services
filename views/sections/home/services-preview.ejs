@@ -1,0 +1,275 @@
+<style>
+    /* ==============================
+   Services Preview Section
+============================== */
+
+.services-preview-section {
+    padding: 96px 0;
+}
+
+.services-preview-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.services-preview-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.services-preview-title {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.services-preview-link {
+    flex-shrink: 0;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.services-preview-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   Services Grid
+============================== */
+
+.services-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+}
+
+.service-preview-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background: #ffffff;
+}
+
+.service-preview-card h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.service-description {
+    margin: 0 0 16px;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.service-problem {
+    margin: 0 0 24px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(0, 0, 0, 0.25);
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.service-cta {
+    margin-top: auto;
+    color: #000000;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.service-cta:hover {
+    color: #737373;
+}
+
+
+/* ==============================
+   Services Preview Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .services-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .services-preview-section {
+        padding: 72px 0;
+    }
+
+    .services-preview-container {
+        padding: 0 20px;
+    }
+
+    .services-preview-header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .services-preview-title {
+        font-size: 30px;
+    }
+
+    .services-preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-preview-card {
+        padding: 28px 24px;
+    }
+}
+</style>
+
+<section class="services-preview-section">
+    <div class="services-preview-container">
+
+        <div class="services-preview-header">
+            <h2 class="services-preview-title">
+                What We Help Shopify Merchants With
+            </h2>
+
+            <a href="/services" class="services-preview-link">
+                All 14 services →
+            </a>
+        </div>
+
+        <ul class="services-preview-grid">
+
+            <li class="service-preview-card">
+                <h3>Shopify Store Setup</h3>
+
+                <p class="service-description">
+                    Build a professional Shopify store with the right structure,
+                    user experience, and essential functionality from day one.
+                </p>
+
+                <p class="service-problem">
+                    You are launching and don't want to guess your way through
+                    structure, apps, and setup.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-preview-card">
+                <h3>Shopify Store Design &amp; Redesign</h3>
+
+                <p class="service-description">
+                    Improve the appearance, usability, structure, navigation,
+                    and overall customer experience of an existing store.
+                </p>
+
+                <p class="service-problem">
+                    Your store looks dated or confusing and visitors don't know
+                    where to go next.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-preview-card">
+                <h3>Shopify Theme Customization</h3>
+
+                <p class="service-description">
+                    Customize your Shopify theme to create a more professional,
+                    brand-aligned store experience.
+                </p>
+
+                <p class="service-problem">
+                    Your theme almost works, but it doesn't match your brand or
+                    the way you sell.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-preview-card">
+                <h3>Shopify Store Optimization</h3>
+
+                <p class="service-description">
+                    Identify and improve the areas of your store that are
+                    hurting customer experience and conversions.
+                </p>
+
+                <p class="service-problem">
+                    You get visitors, but something in the experience is
+                    quietly losing them.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-preview-card">
+                <h3>Conversion Rate Optimization</h3>
+
+                <p class="service-description">
+                    Improve the customer journey, messaging, product pages,
+                    calls to action, and trust elements across the store.
+                </p>
+
+                <p class="service-problem">
+                    Traffic is fine. The percentage of people who actually buy
+                    is not.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-preview-card">
+                <h3>SEO</h3>
+
+                <p class="service-description">
+                    Strengthen SEO foundations across product pages, collections,
+                    metadata, and site structure.
+                </p>
+
+                <p class="service-problem">
+                    Your store barely shows up when customers search for what
+                    you sell.
+                </p>
+
+                <a href="/contact" class="service-cta">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</section>

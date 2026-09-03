@@ -1,0 +1,140 @@
+<style>
+    /* ==============================
+   Final CTA Section
+============================== */
+
+.final-cta-section {
+    background: #000000;
+    padding: 96px 0;
+}
+
+.final-cta-container {
+    width: 100%;
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.final-cta-title {
+    margin: 0 0 32px;
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+.final-cta-description {
+    max-width: 55ch;
+    margin: 0 auto 48px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.final-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.final-cta-primary,
+.final-cta-secondary {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.final-cta-primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.final-cta-primary:hover {
+    background: #e5e5e5;
+}
+
+.final-cta-secondary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.final-cta-secondary:hover {
+    background: #e5e5e5;
+}
+
+
+/* ==============================
+   Final CTA Responsive
+============================== */
+
+@media (max-width: 767px) {
+    .final-cta-section {
+        padding: 72px 0;
+    }
+
+    .final-cta-container {
+        padding: 0 20px;
+    }
+
+    .final-cta-title {
+        font-size: 42px;
+    }
+
+    .final-cta-description {
+        font-size: 17px;
+        margin-bottom: 40px;
+    }
+
+    .final-cta-actions {
+        flex-direction: column;
+    }
+
+    .final-cta-primary,
+    .final-cta-secondary {
+        width: 100%;
+        padding: 17px 24px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-cta-title {
+        font-size: 36px;
+    }
+}
+</style>
+
+<section class="final-cta-section">
+    <div class="final-cta-container">
+
+        <h2 class="final-cta-title">
+            Ready to Improve Your Shopify Store?
+        </h2>
+
+        <p class="final-cta-description">
+            Tell us about your store, your biggest challenge, and what
+            you're trying to achieve. We'll help you figure out the
+            most practical next step.
+        </p>
+
+        <div class="final-cta-actions">
+            <a href="/contact" class="final-cta-primary">
+                Discuss Your Store
+            </a>
+
+            <a href="mailto:info@marjheerdy.com" class="final-cta-secondary">
+                Email Marjheerdy
+            </a>
+        </div>
+
+    </div>
+</section>

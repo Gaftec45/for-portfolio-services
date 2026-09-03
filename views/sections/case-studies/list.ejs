@@ -1,0 +1,535 @@
+<style>
+    /* ==============================
+   Case Studies List
+============================== */
+
+.case-studies-list-section {
+    padding: 64px 0;
+}
+
+.case-studies-list-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.case-studies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #e5e5e5;
+}
+
+.case-study-card {
+    background: #ffffff;
+    padding: 40px;
+}
+
+.case-study-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+    margin-bottom: 24px;
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.case-study-meta-primary {
+    color: #000000;
+}
+
+.case-study-title {
+    max-width: 24ch;
+    margin: 0;
+    color: #171717;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.case-study-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.case-study-block h3 {
+    margin: 0 0 8px;
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.case-study-block p {
+    margin: 0;
+    color: rgba(23, 23, 23, 0.9);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.case-study-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.case-study-list li {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    color: rgba(23, 23, 23, 0.9);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.case-study-list li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 16px;
+    height: 1px;
+    margin-top: 11px;
+    background: #000000;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 767px) {
+    .case-studies-list-section {
+        padding: 48px 0;
+    }
+
+    .case-studies-list-container {
+        padding: 0 20px;
+    }
+
+    .case-study-card {
+        padding: 28px 24px;
+    }
+
+    .case-study-meta {
+        gap: 8px 16px;
+    }
+
+    .case-study-title {
+        font-size: 26px;
+    }
+
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-top: 28px;
+    }
+
+    .case-study-column {
+        gap: 24px;
+    }
+}
+</style>
+
+<section class="case-studies-list-section">
+    <div class="case-studies-list-container">
+
+        <div class="case-studies-list">
+
+            <!-- Store 01 -->
+            <article class="case-study-card">
+                <div class="case-study-meta">
+                    <span class="case-study-meta-primary">Store 01</span>
+                    <span>Focus: Conversion Rate Optimization</span>
+                    <span>Stage: Existing store</span>
+                </div>
+
+                <h2 class="case-study-title">
+                    Traffic arrives, but the checkout journey leaks
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Challenge</h3>
+                            <p>
+                                A store is paying for traffic and getting visits,
+                                but a large share of sessions end on the product
+                                page or in the cart without an order being placed.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Store situation</h3>
+                            <p>
+                                Product pages carry thin copy and unclear shipping
+                                information, the cart requires several taps to reach
+                                checkout on mobile, and trust signals appear only
+                                after payment details are requested.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Strategy</h3>
+                            <p>
+                                Work the funnel in the order money is lost:
+                                product page clarity first, then cart and checkout
+                                friction, then post-purchase reassurance. Change
+                                one thing at a time so the effect of each change
+                                stays readable.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Implementation</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Rewrite product page structure: price, variant,
+                                    shipping and returns visible without scrolling
+                                </li>
+                                <li>
+                                    Reduce cart-to-checkout steps and enable express
+                                    payment options
+                                </li>
+                                <li>
+                                    Add returns, delivery and support information
+                                    above the fold on mobile
+                                </li>
+                                <li>
+                                    Track add-to-cart, checkout-start and purchase
+                                    separately to find the real drop point
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>What this is designed to change</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Fewer sessions abandoned at product-page level
+                                </li>
+                                <li>
+                                    A shorter, clearer path from cart to payment
+                                </li>
+                                <li>
+                                    A measurable baseline so future changes can be
+                                    judged, not guessed
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- Store 02 -->
+            <article class="case-study-card">
+                <div class="case-study-meta">
+                    <span class="case-study-meta-primary">Store 02</span>
+                    <span>Focus: Store Redesign</span>
+                    <span>Stage: Rebuild</span>
+                </div>
+
+                <h2 class="case-study-title">
+                    A store that grew feature by feature and lost its shape
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Challenge</h3>
+                            <p>
+                                A store has been edited for two years by different
+                                hands. Navigation has grown to a long list,
+                                collections overlap, and the theme is slowed by
+                                apps that are no longer used.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Store situation</h3>
+                            <p>
+                                Customers cannot find categories reliably, mobile
+                                layout breaks on several templates, and page weight
+                                is high because of leftover scripts.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Strategy</h3>
+                            <p>
+                                Rebuild the information architecture before touching
+                                visual design. Decide what the store sells, in what
+                                groups, and how a first-time visitor reaches it in
+                                two taps.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Implementation</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Audit collections and merge or retire overlapping ones
+                                </li>
+                                <li>
+                                    Rebuild navigation around how customers shop,
+                                    not how the catalogue is stored
+                                </li>
+                                <li>
+                                    Rebuild key templates mobile-first on a clean,
+                                    maintainable theme
+                                </li>
+                                <li>
+                                    Remove unused apps and scripts, then re-check
+                                    page weight
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>What this is designed to change</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    A navigation a new visitor can use without instruction
+                                </li>
+                                <li>
+                                    Consistent layout across every template on mobile
+                                </li>
+                                <li>
+                                    A lighter store that is cheaper and faster to maintain
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- Store 03 -->
+            <article class="case-study-card">
+                <div class="case-study-meta">
+                    <span class="case-study-meta-primary">Store 03</span>
+                    <span>Focus: Klaviyo &amp; Email</span>
+                    <span>Stage: Retention</span>
+                </div>
+
+                <h2 class="case-study-title">
+                    All revenue comes from paid acquisition, none from the list
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Challenge</h3>
+                            <p>
+                                A store collects email addresses but sends only
+                                occasional campaigns. Every sale has to be bought
+                                again through ads.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Store situation</h3>
+                            <p>
+                                No welcome sequence, no abandoned checkout recovery,
+                                no post-purchase follow-up, and a list that has
+                                never been segmented.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Strategy</h3>
+                            <p>
+                                Install the flows that run without ongoing effort
+                                first, because automated email earns while nothing
+                                is being sent manually. Campaigns come after the
+                                flows are live.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Implementation</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Welcome series for new subscribers with a clear
+                                    first-purchase reason
+                                </li>
+                                <li>
+                                    Abandoned checkout and browse abandonment recovery
+                                </li>
+                                <li>
+                                    Post-purchase sequence covering delivery expectations,
+                                    care and re-order
+                                </li>
+                                <li>
+                                    Segment by purchase behaviour rather than sending
+                                    everything to everyone
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>What this is designed to change</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Revenue that continues between campaigns
+                                </li>
+                                <li>
+                                    Recovered checkouts that would otherwise have been lost
+                                </li>
+                                <li>
+                                    Lower dependence on paid acquisition for repeat sales
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- Store 04 -->
+            <article class="case-study-card">
+                <div class="case-study-meta">
+                    <span class="case-study-meta-primary">Store 04</span>
+                    <span>Focus: SEO Foundations</span>
+                    <span>Stage: Organic growth</span>
+                </div>
+
+                <h2 class="case-study-title">
+                    A store invisible to search because the basics were never set
+                </h2>
+
+                <div class="case-study-grid">
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Challenge</h3>
+                            <p>
+                                A store ranks for its own brand name and nothing
+                                else. Category and product pages are not being
+                                found by people searching for what the store sells.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Store situation</h3>
+                            <p>
+                                Duplicate and templated meta titles, thin collection
+                                pages, unstructured product descriptions, and no
+                                internal linking between related products.
+                            </p>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>Strategy</h3>
+                            <p>
+                                Fix the technical and structural foundations before
+                                producing content. Content added on a broken
+                                foundation does not compound.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="case-study-column">
+
+                        <div class="case-study-block">
+                            <h3>Implementation</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Unique, intent-matched titles and descriptions
+                                    across collections and products
+                                </li>
+                                <li>
+                                    Collection pages given real, useful copy instead
+                                    of a bare product grid
+                                </li>
+                                <li>
+                                    Product structured data so listings display
+                                    correctly in search results
+                                </li>
+                                <li>
+                                    Internal linking between related products and
+                                    their parent collections
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="case-study-block">
+                            <h3>What this is designed to change</h3>
+
+                            <ul class="case-study-list">
+                                <li>
+                                    Pages eligible to rank for what customers
+                                    actually search for
+                                </li>
+                                <li>
+                                    Richer search listings that earn more clicks
+                                    at the same position
+                                </li>
+                                <li>
+                                    A base that future content work can build on
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>

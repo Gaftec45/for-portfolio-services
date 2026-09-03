@@ -1,0 +1,374 @@
+<style>
+    /* ==============================
+   Services List
+============================== */
+
+.services-list-section {
+    padding: 80px 0;
+}
+
+.services-list-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.services-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+    list-style: none;
+}
+
+.service-list-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 32px;
+    background: #ffffff;
+}
+
+.service-list-number {
+    color: #000000;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.service-list-card h2 {
+    margin: 16px 0 12px;
+    color: #171717;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.service-list-description {
+    margin: 0 0 24px;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.service-list-solves {
+    margin: 0 0 32px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(0, 0, 0, 0.25);
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.service-list-solves span {
+    display: block;
+    margin-bottom: 2px;
+    color: #171717;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.service-list-link {
+    margin-top: auto;
+    color: #000000;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.service-list-link:hover {
+    color: #737373;
+}
+
+
+/* ==============================
+   Services List Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .services-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .services-list-section {
+        padding: 64px 0;
+    }
+
+    .services-list-container {
+        padding: 0 20px;
+    }
+
+    .services-list-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-list-card {
+        padding: 28px 24px;
+    }
+}
+</style>
+
+<section class="services-list-section">
+    <div class="services-list-container">
+
+        <ul class="services-list-grid">
+
+            <li class="service-list-card">
+                <span class="service-list-number">01</span>
+                <h2>Shopify Store Setup</h2>
+                <p class="service-list-description">
+                    Build a professional Shopify store with the right
+                    structure, user experience, and essential functionality
+                    from day one.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You are launching and don't want to guess your way
+                    through structure, apps, and setup.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">02</span>
+                <h2>Shopify Store Design &amp; Redesign</h2>
+                <p class="service-list-description">
+                    Improve the appearance, usability, structure, navigation,
+                    and overall customer experience of an existing store.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Your store looks dated or confusing and visitors don't
+                    know where to go next.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">03</span>
+                <h2>Shopify Theme Customization</h2>
+                <p class="service-list-description">
+                    Customize your Shopify theme to create a more
+                    professional, brand-aligned store experience.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Your theme almost works, but it doesn't match your
+                    brand or the way you sell.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">04</span>
+                <h2>Shopify Store Optimization</h2>
+                <p class="service-list-description">
+                    Identify and improve the areas of your store that are
+                    hurting customer experience and conversions.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You get visitors, but something in the experience is
+                    quietly losing them.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">05</span>
+                <h2>Conversion Rate Optimization</h2>
+                <p class="service-list-description">
+                    Improve the customer journey, messaging, product pages,
+                    calls to action, and trust elements across the store.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Traffic is fine. The percentage of people who actually
+                    buy is not.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">06</span>
+                <h2>SEO</h2>
+                <p class="service-list-description">
+                    Strengthen SEO foundations across product pages,
+                    collections, metadata, and site structure.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Your store barely shows up when customers search for
+                    what you sell.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">07</span>
+                <h2>Email Marketing</h2>
+                <p class="service-list-description">
+                    Use email to increase retention, repeat purchases,
+                    abandoned-cart recovery, and revenue you already
+                    earned access to.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You collect emails but rarely turn them into repeat
+                    orders.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">08</span>
+                <h2>Klaviyo Email Marketing</h2>
+                <p class="service-list-description">
+                    Create and optimize Klaviyo flows and segmentation
+                    built around how your customers actually buy.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Klaviyo is installed, but the flows are incomplete,
+                    generic, or switched off.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">09</span>
+                <h2>Product Page Optimization</h2>
+                <p class="service-list-description">
+                    Improve product page structure, copy, presentation,
+                    trust signals, and usability.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    People reach your product pages and leave without
+                    adding to cart.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">10</span>
+                <h2>Landing Page Optimization</h2>
+                <p class="service-list-description">
+                    Create or improve landing pages designed around a
+                    specific campaign, product, or customer journey.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You are sending paid traffic to pages that were never
+                    built for it.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">11</span>
+                <h2>Speed &amp; Performance Optimization</h2>
+                <p class="service-list-description">
+                    Identify performance issues and implement practical
+                    improvements where they are possible.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    Your store feels slow, especially on mobile, and
+                    visitors don't wait around.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">12</span>
+                <h2>Shopify Store Audit</h2>
+                <p class="service-list-description">
+                    A structured review of your store that identifies
+                    problems, weaknesses, and the highest-priority
+                    opportunities.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You know something is off, but you don't know what
+                    to fix first.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">13</span>
+                <h2>Ecommerce Marketing Strategy</h2>
+                <p class="service-list-description">
+                    Understand which parts of your marketing and customer
+                    journey actually need attention right now.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You are doing a bit of everything and none of it
+                    compounds.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+            <li class="service-list-card">
+                <span class="service-list-number">14</span>
+                <h2>Ongoing Shopify Support</h2>
+                <p class="service-list-description">
+                    Continued assistance for merchants who want steady
+                    optimization and improvements over time.
+                </p>
+                <p class="service-list-solves">
+                    <span>Solves</span>
+                    You need a reliable Shopify partner instead of
+                    one-off fixes.
+                </p>
+                <a href="/contact" class="service-list-link">
+                    Discuss Your Store →
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</section>

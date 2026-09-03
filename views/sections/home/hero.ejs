@@ -1,0 +1,612 @@
+<style>
+/* ========================================
+   Home Hero
+======================================== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 0 96px;
+    background: #ffffff;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+    align-items: center;
+    gap: 64px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   Hero Content
+======================================== */
+
+.hero-content {
+    min-width: 0;
+    animation: heroRise 0.7s ease-out both;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 0 24px;
+    padding: 4px 8px;
+
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.05);
+    color: #111111;
+
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.hero-badge span {
+    flex: 0 0 auto;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: #111111;
+}
+
+.hero-title {
+    max-width: 850px;
+
+    margin: 0 0 32px;
+
+    color: #111111;
+
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+
+    overflow-wrap: break-word;
+}
+
+.hero-title span {
+    color: #111111;
+}
+
+.hero-description {
+    max-width: 52ch;
+
+    margin: 0 0 40px;
+
+    color: #737373;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   Hero Buttons
+======================================== */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 16px 32px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.hero-primary-button {
+    border: 1px solid #111111;
+
+    background: #111111;
+    color: #ffffff;
+}
+
+.hero-primary-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.hero-secondary-button {
+    border: 1px solid #e5e5e5;
+
+    background: #ffffff;
+    color: #111111;
+}
+
+.hero-secondary-button:hover {
+    background: #f5f5f5;
+}
+
+
+/* ========================================
+   Diagnostic Visual
+======================================== */
+
+.hero-visual {
+    position: relative;
+    min-width: 0;
+
+    animation:
+        heroRise 0.7s ease-out 0.2s both;
+}
+
+.diagnostic-card {
+    width: 100%;
+    padding: 24px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   Diagnostic Header
+======================================== */
+
+.diagnostic-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 32px;
+}
+
+.diagnostic-label {
+    margin: 0 0 4px;
+
+    color: #737373;
+
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+.diagnostic-title {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   Graph
+======================================== */
+
+.graph-preview {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    width: 96px;
+    height: 48px;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.line-graph {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.3;
+
+    background:
+        linear-gradient(
+            145deg,
+            transparent 0%,
+            transparent 20%,
+            #111111 21%,
+            #111111 23%,
+            transparent 24%,
+            transparent 40%,
+            #111111 41%,
+            #111111 43%,
+            transparent 44%,
+            transparent 58%,
+            #111111 59%,
+            #111111 61%,
+            transparent 62%,
+            transparent 100%
+        );
+}
+
+
+/* ========================================
+   Diagnostic Content
+======================================== */
+
+.diagnostic-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.progress-bar {
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #e5e5e5;
+}
+
+.progress-bar div {
+    width: 75%;
+    height: 100%;
+
+    background: #111111;
+}
+
+.diagnostic-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+}
+
+.diagnostic-grid div {
+    height: 64px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.diagnostic-grid div:nth-child(2) {
+    border-color: rgba(0, 0, 0, 0.12);
+
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.diagnostic-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding-top: 16px;
+
+    color: #737373;
+
+    font-family: monospace;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.diagnostic-footer span {
+    min-width: 0;
+}
+
+.diagnostic-footer span:first-child {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   Animation
+======================================== */
+
+@keyframes heroRise {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   Large Tablet / Smaller Desktop
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .hero-container {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.75fr);
+        gap: 40px;
+    }
+
+    .hero-title {
+        font-size: clamp(46px, 6vw, 72px);
+    }
+
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 1023px) {
+
+    .hero-section {
+        padding: 64px 0 80px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-title {
+        max-width: 850px;
+    }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+
+    .hero-section {
+        padding: 48px 0 72px;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+    }
+
+    .hero-badge {
+        margin-bottom: 20px;
+
+        font-size: 9px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .hero-description {
+        margin-bottom: 32px;
+
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding: 44px 0 64px;
+    }
+
+    .hero-container {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        min-height: 50px;
+        padding: 14px 24px;
+    }
+
+}
+
+
+/* ========================================
+   Very Small Screens
+======================================== */
+
+@media (max-width: 360px) {
+
+    .hero-container {
+        padding: 0 16px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+}
+
+</style>
+
+<section class="hero-section">
+    <div class="hero-container">
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+
+            <p class="hero-badge">
+                <span></span>
+                Your Shopify Growth Partner
+            </p>
+
+            <h1 class="hero-title">
+                Turn Your Shopify Store Into a Better
+                <span>Performing</span>
+                Business
+            </h1>
+
+            <p class="hero-description">
+                Marjheerdy helps Shopify store owners build,
+                optimize, and grow their stores through strategic
+                design, conversion optimization, SEO, email
+                marketing, and practical ecommerce solutions
+                tailored to their goals and budget.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="/contact"
+                    class="hero-primary-button"
+                >
+                    Discuss Your Store
+                </a>
+
+                <a
+                    href="/services"
+                    class="hero-secondary-button"
+                >
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Diagnostic Visual -->
+        <div class="hero-visual">
+
+            <div
+                class="diagnostic-card"
+                aria-hidden="true"
+            >
+
+                <div class="diagnostic-header">
+
+                    <div>
+                        <p class="diagnostic-label">
+                            Store diagnostic
+                        </p>
+
+                        <p class="diagnostic-title">
+                            Conversion path
+                        </p>
+                    </div>
+
+                    <div class="graph-preview">
+                        <div class="line-graph"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="diagnostic-content">
+
+                    <div class="progress-bar">
+                        <div></div>
+                    </div>
+
+                    <div class="diagnostic-grid">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="diagnostic-footer">
+
+                        <span>
+                            PRODUCT PAGE / CART / CHECKOUT
+                        </span>
+
+                        <span>
+                            SHOPIFY
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

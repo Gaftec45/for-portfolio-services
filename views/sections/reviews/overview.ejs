@@ -1,0 +1,160 @@
+<style>
+    /* ==============================
+   Reviews Overview
+============================== */
+
+.reviews-overview-section {
+    padding: 64px 0;
+}
+
+.reviews-overview-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.reviews-overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+}
+
+.reviews-overview-stat {
+    padding: 24px;
+    background: #ffffff;
+}
+
+.reviews-overview-label {
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.reviews-overview-value {
+    margin-top: 8px;
+    color: #171717;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.reviews-empty-state {
+    margin-top: 64px;
+    padding: 48px;
+    border: 1px dashed #e5e5e5;
+    background: #ffffff;
+}
+
+.reviews-empty-state h2 {
+    margin: 0;
+    color: #171717;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.reviews-empty-state p {
+    max-width: 60ch;
+    margin: 16px 0 0;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 767px) {
+    .reviews-overview-section {
+        padding: 48px 0;
+    }
+
+    .reviews-overview-container {
+        padding: 0 20px;
+    }
+
+    .reviews-overview-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-overview-stat {
+        padding: 20px;
+    }
+
+    .reviews-overview-value {
+        font-size: 26px;
+    }
+
+    .reviews-empty-state {
+        margin-top: 48px;
+        padding: 32px 24px;
+    }
+
+    .reviews-empty-state h2 {
+        font-size: 23px;
+    }
+}
+</style>
+
+<section class="reviews-overview-section">
+    <div class="reviews-overview-container">
+
+        <div class="reviews-overview-stats">
+
+            <div class="reviews-overview-stat">
+                <div class="reviews-overview-label">
+                    Published reviews
+                </div>
+
+                <div class="reviews-overview-value">
+                    0
+                </div>
+            </div>
+
+            <div class="reviews-overview-stat">
+                <div class="reviews-overview-label">
+                    Average rating
+                </div>
+
+                <div class="reviews-overview-value">
+                    —
+                </div>
+            </div>
+
+            <div class="reviews-overview-stat">
+                <div class="reviews-overview-label">
+                    Source
+                </div>
+
+                <div class="reviews-overview-value">
+                    Clients only
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="reviews-empty-state">
+            <h2>
+                No reviews published yet
+            </h2>
+
+            <p>
+                We would rather show an empty page than an invented one.
+                If we have worked on your Shopify store, your review can
+                be the first one here.
+            </p>
+        </div>
+
+    </div>
+</section>

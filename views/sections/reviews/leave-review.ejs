@@ -1,0 +1,417 @@
+<style>
+    /* ==============================
+   Reviews - Leave A Review
+============================== */
+
+.reviews-leave-section {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    background: rgba(250, 250, 250, 0.6);
+    padding: 80px 0;
+}
+
+.reviews-leave-container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.reviews-leave-title {
+    margin: 0;
+    color: #171717;
+    font-size: 40px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.reviews-leave-description {
+    margin: 16px 0 0;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.reviews-leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.reviews-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.reviews-form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-form-field label,
+.reviews-rating-field legend {
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.reviews-form-field input,
+.reviews-form-field select,
+.reviews-form-field textarea {
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background: #ffffff;
+    padding: 12px 16px;
+    color: #171717;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.reviews-form-field input,
+.reviews-form-field select {
+    height: 48px;
+}
+
+.reviews-form-field textarea {
+    min-height: 144px;
+    resize: vertical;
+}
+
+.reviews-form-field input:focus,
+.reviews-form-field select:focus,
+.reviews-form-field textarea:focus {
+    border-color: #171717;
+}
+
+.reviews-form-field input::placeholder,
+.reviews-form-field textarea::placeholder {
+    color: #a3a3a3;
+}
+
+.reviews-rating-field {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.reviews-rating-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.reviews-rating-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #171717;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.05);
+    color: #171717;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.reviews-rating-button:hover,
+.reviews-rating-button[aria-pressed="true"] {
+    background: #171717;
+    color: #ffffff;
+    border-color: #171717;
+}
+
+.reviews-submit-button {
+    align-self: flex-start;
+    border: 0;
+    border-radius: 2px;
+    background: #171717;
+    color: #ffffff;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.reviews-submit-button:hover {
+    background: #000000;
+}
+
+.reviews-submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 767px) {
+    .reviews-leave-section {
+        padding: 56px 0;
+    }
+
+    .reviews-leave-container {
+        padding: 0 20px;
+    }
+
+    .reviews-leave-title {
+        font-size: 34px;
+    }
+
+    .reviews-form-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .reviews-submit-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-leave-title {
+        font-size: 30px;
+    }
+
+    .reviews-rating-buttons {
+        gap: 6px;
+    }
+
+    .reviews-rating-button {
+        width: 42px;
+        height: 42px;
+    }
+}
+</style>
+
+<section id="leave-a-review" class="reviews-leave-section">
+    <div class="reviews-leave-container">
+
+        <h2 class="reviews-leave-title">
+            Leave a review
+        </h2>
+
+        <p class="reviews-leave-description">
+            For clients we have worked with. Submissions are reviewed
+            before publishing — usually within a couple of working days.
+        </p>
+
+        <form class="reviews-leave-form">
+
+            <div class="reviews-form-grid">
+
+                <div class="reviews-form-field">
+                    <label for="reviewer_name">
+                        Your name *
+                    </label>
+
+                    <input
+                        id="reviewer_name"
+                        name="reviewer_name"
+                        type="text"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="reviews-form-field">
+                    <label for="store_name">
+                        Store name
+                    </label>
+
+                    <input
+                        id="store_name"
+                        name="store_name"
+                        type="text"
+                        maxlength="120"
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="reviews-form-field">
+                <label for="store_url">
+                    Store URL
+                </label>
+
+                <input
+                    id="store_url"
+                    name="store_url"
+                    type="url"
+                    placeholder="https://"
+                >
+            </div>
+
+
+            <div class="reviews-form-field">
+                <label for="service">
+                    Service you worked with us on
+                </label>
+
+                <select id="service" name="service">
+                    <option value="" selected>
+                        Select a service
+                    </option>
+
+                    <option value="Shopify Store Setup">
+                        Shopify Store Setup
+                    </option>
+
+                    <option value="Shopify Store Design & Redesign">
+                        Shopify Store Design &amp; Redesign
+                    </option>
+
+                    <option value="Shopify Theme Customization">
+                        Shopify Theme Customization
+                    </option>
+
+                    <option value="Shopify Store Optimization">
+                        Shopify Store Optimization
+                    </option>
+
+                    <option value="Conversion Rate Optimization">
+                        Conversion Rate Optimization
+                    </option>
+
+                    <option value="SEO">
+                        SEO
+                    </option>
+
+                    <option value="Email Marketing">
+                        Email Marketing
+                    </option>
+
+                    <option value="Klaviyo Email Marketing">
+                        Klaviyo Email Marketing
+                    </option>
+
+                    <option value="Product Page Optimization">
+                        Product Page Optimization
+                    </option>
+
+                    <option value="Landing Page Optimization">
+                        Landing Page Optimization
+                    </option>
+
+                    <option value="Speed & Performance Optimization">
+                        Speed &amp; Performance Optimization
+                    </option>
+
+                    <option value="Shopify Store Audit">
+                        Shopify Store Audit
+                    </option>
+
+                    <option value="Ecommerce Marketing Strategy">
+                        Ecommerce Marketing Strategy
+                    </option>
+
+                    <option value="Ongoing Shopify Support">
+                        Ongoing Shopify Support
+                    </option>
+                </select>
+            </div>
+
+
+            <fieldset class="reviews-rating-field">
+                <legend>
+                    Rating *
+                </legend>
+
+                <div class="reviews-rating-buttons">
+
+                    <button
+                        type="button"
+                        aria-pressed="false"
+                        aria-label="1 star"
+                        class="reviews-rating-button"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        aria-pressed="false"
+                        aria-label="2 stars"
+                        class="reviews-rating-button"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        aria-pressed="false"
+                        aria-label="3 stars"
+                        class="reviews-rating-button"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        aria-pressed="false"
+                        aria-label="4 stars"
+                        class="reviews-rating-button"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        aria-pressed="true"
+                        aria-label="5 stars"
+                        class="reviews-rating-button"
+                    >
+                        ★
+                    </button>
+
+                </div>
+            </fieldset>
+
+
+            <div class="reviews-form-field">
+                <label for="body">
+                    Your review *
+                </label>
+
+                <textarea
+                    id="body"
+                    name="body"
+                    rows="6"
+                    minlength="10"
+                    maxlength="2000"
+                    required
+                    placeholder="What did we work on, and how did it go?"
+                ></textarea>
+            </div>
+
+
+            <button
+                type="submit"
+                class="reviews-submit-button"
+            >
+                Submit review
+            </button>
+
+        </form>
+
+    </div>
+</section>

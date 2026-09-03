@@ -1,0 +1,290 @@
+<style>
+    /* ==============================
+   Contact - Conversation
+============================== */
+
+.contact-conversation-section {
+    padding: 80px 0;
+}
+
+.contact-conversation-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.contact-conversation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    align-items: start;
+}
+
+.contact-conversation-card {
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    padding: 40px;
+}
+
+.contact-conversation-title {
+    margin: 0;
+    color: #171717;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.contact-conversation-description {
+    max-width: 55ch;
+    margin: 16px 0 0;
+    color: #737373;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.contact-conversation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.contact-conversation-primary,
+.contact-conversation-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 16px 32px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.contact-conversation-primary {
+    border: 1px solid #171717;
+    background: #171717;
+    color: #ffffff;
+}
+
+.contact-conversation-primary:hover {
+    background: #000000;
+}
+
+.contact-conversation-secondary {
+    border: 1px solid #171717;
+    background: #ffffff;
+    color: #171717;
+}
+
+.contact-conversation-secondary:hover {
+    background: #171717;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   Contact Details
+============================== */
+
+.contact-details-card {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    padding: 32px;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-detail-label {
+    margin: 0;
+    color: #737373;
+    font-family: monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.contact-detail-value {
+    display: block;
+    margin-top: 8px;
+    color: #171717;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-detail-value:hover {
+    color: #000000;
+}
+
+.contact-whatsapp-button {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    border: 1px solid #171717;
+    border-radius: 2px;
+    padding: 12px 20px;
+    color: #171717;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.contact-whatsapp-button:hover {
+    background: #171717;
+    color: #ffffff;
+}
+
+.contact-detail-note {
+    margin: 0;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+    color: #737373;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 1023px) {
+    .contact-conversation-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-conversation-section {
+        padding: 56px 0;
+    }
+
+    .contact-conversation-container {
+        padding: 0 20px;
+    }
+
+    .contact-conversation-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-conversation-card {
+        padding: 32px 24px;
+    }
+
+    .contact-details-card {
+        padding: 24px;
+    }
+}
+</style>
+
+<section class="contact-conversation-section">
+    <div class="contact-conversation-container">
+
+        <div class="contact-conversation-grid">
+
+            <div class="contact-conversation-card">
+
+                <h2 class="contact-conversation-title">
+                    Start the conversation
+                </h2>
+
+                <p class="contact-conversation-description">
+                    Send us an email or a WhatsApp message with a quick
+                    overview of your store and what you're trying to fix.
+                    We typically reply with a practical next step rather
+                    than a sales pitch.
+                </p>
+
+                <div class="contact-conversation-actions">
+
+                    <a
+                        href="mailto:info@marjheerdy.com"
+                        class="contact-conversation-primary"
+                    >
+                        Email Marjheerdy
+                    </a>
+
+                    <a
+                        href="https://wa.me/447454758903"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-conversation-secondary"
+                    >
+                        Message on WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <aside class="contact-details-card">
+
+                <div class="contact-detail">
+                    <h2 class="contact-detail-label">
+                        Email
+                    </h2>
+
+                    <a
+                        href="mailto:info@marjheerdy.com"
+                        class="contact-detail-value"
+                    >
+                        info@marjheerdy.com
+                    </a>
+                </div>
+
+
+                <div class="contact-detail">
+                    <h2 class="contact-detail-label">
+                        WhatsApp
+                    </h2>
+
+                    <a
+                        href="https://wa.me/447454758903"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-whatsapp-button"
+                    >
+                        Message on WhatsApp
+                    </a>
+                </div>
+
+
+                <p class="contact-detail-note">
+                    No phone call required. We're happy to work through
+                    everything over email or WhatsApp.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </div>
+</section>
