@@ -1,0 +1,141 @@
+<style>
+    .home-proof-section {
+    width: 100%;
+    padding: 96px 0;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.home-proof-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.home-proof-header {
+    max-width: 650px;
+    margin-bottom: 42px;
+}
+
+.home-proof-header h2 {
+    margin: 14px 0 16px;
+    font-size: clamp(32px, 4vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+
+.home-proof-header p {
+    max-width: 520px;
+    margin: 0;
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.home-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.home-proof-card {
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    background: #000;
+}
+
+.home-proof-card video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    height: 200px;
+}
+
+@media (max-width: 1023px) {
+    .home-proof-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-proof-card:last-child {
+        max-width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 640px) {
+    .home-proof-section {
+        padding: 72px 0;
+    }
+
+    .home-proof-container {
+        padding: 0 20px;
+    }
+
+    .home-proof-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .home-proof-card:last-child {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-proof-container {
+        padding: 0 16px;
+    }
+}
+</style>
+
+<section class="home-proof-section">
+    <div class="home-proof-container">
+
+        <div class="home-proof-header">
+            <span class="section-label">REAL RESULTS</span>
+
+            <h2>
+                Proof that the strategy works.
+            </h2>
+
+            <p>
+                See real examples of sales and results generated through our work.
+            </p>
+        </div>
+
+        <div class="home-proof-grid">
+
+            <article class="home-proof-card">
+                <video
+                    src="https://res.cloudinary.com/dfq8pjhcb/video/upload/v1788453823/sample1_q5w68b.mp4"
+                    controls
+                    playsinline
+                    preload="metadata">
+                </video>
+            </article>
+
+            <article class="home-proof-card">
+                <video
+                    src="https://res.cloudinary.com/dfq8pjhcb/video/upload/v1788453863/sample2_tchav6.mp4"
+                    controls
+                    playsinline
+                    preload="metadata">
+                </video>
+            </article>
+
+            <article class="home-proof-card">
+                <video
+                    src="https://res.cloudinary.com/dfq8pjhcb/video/upload/v1788453899/sample3_yrgd8d.mp4"
+                    controls
+                    playsinline
+                    preload="metadata">
+                </video>
+            </article>
+
+        </div>
+
+    </div>
+</section>

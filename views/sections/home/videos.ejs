@@ -1,0 +1,346 @@
+<style>
+    /* ========================================
+   Home Videos Section
+======================================== */
+
+.home-videos-section {
+    padding: 96px 0;
+
+    border-top: 1px solid #e5e5e5;
+    background: #ffffff;
+}
+
+.home-videos-container {
+    width: 100%;
+    max-width: 1280px;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   Section Header
+======================================== */
+
+.home-videos-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+    align-items: end;
+    gap: 48px;
+
+    margin-bottom: 40px;
+}
+
+.home-videos-label {
+    margin: 0 0 20px;
+
+    color: #737373;
+
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.home-videos-title {
+    max-width: 20ch;
+
+    margin: 0;
+
+    color: #111111;
+
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.home-videos-description {
+    max-width: 48ch;
+
+    margin: 0;
+
+    color: #737373;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   Video Grid
+======================================== */
+
+.home-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.home-video-card {
+    min-width: 0;
+
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+.home-video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+.home-video-wrapper iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.home-video-content {
+    padding: 24px;
+}
+
+.home-video-category {
+    margin: 0 0 12px;
+
+    color: #737373;
+
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.home-video-title {
+    margin: 0;
+
+    color: #111111;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 1023px) {
+
+    .home-videos-section {
+        padding: 80px 0;
+    }
+
+    .home-videos-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-videos-title {
+        max-width: 24ch;
+    }
+
+    .home-videos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-video-card:last-child {
+        grid-column: 1 / -1;
+        max-width: calc(50% - 12px);
+    }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 640px) {
+
+    .home-videos-section {
+        padding: 64px 0;
+    }
+
+    .home-videos-container {
+        padding: 0 20px;
+    }
+
+    .home-videos-header {
+        margin-bottom: 32px;
+    }
+
+    .home-videos-title {
+        font-size: 38px;
+    }
+
+    .home-videos-description {
+        font-size: 15px;
+    }
+
+    .home-videos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-video-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .home-video-content {
+        padding: 20px;
+    }
+
+    .home-video-title {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width: 380px) {
+
+    .home-videos-container {
+        padding: 0 16px;
+    }
+
+    .home-videos-title {
+        font-size: 34px;
+    }
+
+}
+</style>
+
+<section class="home-videos-section">
+    <div class="home-videos-container">
+
+        <div class="home-videos-header">
+
+            <div>
+                <p class="home-videos-label">
+                    Shopify Growth Insights
+                </p>
+
+                <h2 class="home-videos-title">
+                    Practical advice for growing your Shopify store
+                </h2>
+            </div>
+
+            <p class="home-videos-description">
+                Watch practical videos about Shopify design, conversion
+                optimization, SEO, and ecommerce growth.
+            </p>
+
+        </div>
+
+
+        <div class="home-videos-grid">
+
+            <!-- Video 1 -->
+            <article class="home-video-card">
+
+                <div class="home-video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_1"
+                        title="Shopify store growth video"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <div class="home-video-content">
+                    <p class="home-video-category">
+                        Store Optimization
+                    </p>
+
+                    <h3 class="home-video-title">
+                        How to identify what is holding your Shopify store back
+                    </h3>
+                </div>
+
+            </article>
+
+
+            <!-- Video 2 -->
+            <article class="home-video-card">
+
+                <div class="home-video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_2"
+                        title="Shopify conversion optimization video"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <div class="home-video-content">
+                    <p class="home-video-category">
+                        Conversion Optimization
+                    </p>
+
+                    <h3 class="home-video-title">
+                        Simple ways to improve your Shopify conversion rate
+                    </h3>
+                </div>
+
+            </article>
+
+
+            <!-- Video 3 -->
+            <article class="home-video-card">
+
+                <div class="home-video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_3"
+                        title="Shopify ecommerce growth video"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <div class="home-video-content">
+                    <p class="home-video-category">
+                        Ecommerce Growth
+                    </p>
+
+                    <h3 class="home-video-title">
+                        Building a practical growth strategy for your store
+                    </h3>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>

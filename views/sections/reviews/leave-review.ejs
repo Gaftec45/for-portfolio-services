@@ -214,7 +214,12 @@
             before publishing — usually within a couple of working days.
         </p>
 
-        <form class="reviews-leave-form">
+        <form
+            class="reviews-leave-form"
+            id="reviews-leave-form"
+            action="/reviews"
+            method="POST"
+        >
 
             <div class="reviews-form-grid">
 
@@ -336,49 +341,61 @@
                     Rating *
                 </legend>
 
+                <input
+                    type="hidden"
+                    name="rating"
+                    id="review-rating"
+                    value="5"
+                >
+
                 <div class="reviews-rating-buttons">
 
                     <button
                         type="button"
+                        class="reviews-rating-button"
+                        data-rating="1"
                         aria-pressed="false"
                         aria-label="1 star"
-                        class="reviews-rating-button"
                     >
                         ★
                     </button>
 
                     <button
                         type="button"
+                        class="reviews-rating-button"
+                        data-rating="2"
                         aria-pressed="false"
                         aria-label="2 stars"
-                        class="reviews-rating-button"
                     >
                         ★
                     </button>
 
                     <button
                         type="button"
+                        class="reviews-rating-button"
+                        data-rating="3"
                         aria-pressed="false"
                         aria-label="3 stars"
-                        class="reviews-rating-button"
                     >
                         ★
                     </button>
 
                     <button
                         type="button"
+                        class="reviews-rating-button"
+                        data-rating="4"
                         aria-pressed="false"
                         aria-label="4 stars"
-                        class="reviews-rating-button"
                     >
                         ★
                     </button>
 
                     <button
                         type="button"
+                        class="reviews-rating-button"
+                        data-rating="5"
                         aria-pressed="true"
                         aria-label="5 stars"
-                        class="reviews-rating-button"
                     >
                         ★
                     </button>
@@ -415,3 +432,113 @@
 
     </div>
 </section>
+
+<script>
+    const reviewRatingInput = document.getElementById("review-rating");
+
+    const reviewRatingButtons = document.querySelectorAll(
+        ".reviews-rating-button"
+    );
+
+    // Handle rating selection
+    if (reviewRatingInput && reviewRatingButtons.length) {
+        reviewRatingButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedRating = Number(button.dataset.rating);
+
+                reviewRatingInput.value = selectedRating;
+
+                reviewRatingButtons.forEach((ratingButton) => {
+                    const buttonRating = Number(
+                        ratingButton.dataset.rating
+                    );
+
+                    ratingButton.setAttribute(
+                        "aria-pressed",
+                        buttonRating <= selectedRating
+                            ? "true"
+                            : "false"
+                    );
+                });
+            });
+        });
+    }
+
+    const reviewForm = document.getElementById("reviews-leave-form");
+
+    if (reviewForm) {
+        reviewForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const submitButton = reviewForm.querySelector(
+                ".reviews-submit-button"
+            );
+
+            if (!submitButton) {
+                console.error("Review submit button was not found.");
+                return;
+            }
+
+            const originalText = submitButton.textContent;
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+
+            try {
+                // Convert FormData to URL-encoded data.
+                // This works with express.urlencoded().
+                const formData = new URLSearchParams(
+                    new FormData(reviewForm)
+                );
+
+                const response = await fetch(reviewForm.action, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type":
+                            "application/x-www-form-urlencoded",
+                    },
+                    body: formData.toString(),
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(
+                        data.message || "Failed to submit review."
+                    );
+                }
+
+                alert(data.message);
+
+                reviewForm.reset();
+
+                // Reset rating to 5 stars
+                if (reviewRatingInput) {
+                    reviewRatingInput.value = "5";
+                }
+
+                reviewRatingButtons.forEach((button) => {
+                    const rating = Number(button.dataset.rating);
+
+                    button.setAttribute(
+                        "aria-pressed",
+                        rating <= 5 ? "true" : "false"
+                    );
+                });
+            } catch (error) {
+                console.error(
+                    "Review submission error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Something went wrong. Please try again."
+                );
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+    }
+</script>
